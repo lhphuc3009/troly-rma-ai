@@ -1,5 +1,90 @@
 
 import pandas as pd
+
+COLUMN_MAPPING = {
+    "Tên khách hàng": [
+        "khach hang",
+        "ten khach",
+        "ten kh",
+        "cty",
+        "cong ty",
+        "ten cong ty"
+    ],
+    "Sản phẩm": [
+        "san pham",
+        "ma san pham",
+        "ma hang",
+        "product",
+        "ten sp"
+    ],
+    "Nhóm hàng": [
+        "nhom hang",
+        "loai hang",
+        "danh muc",
+        "category"
+    ],
+    "Kỹ thuật viên": [
+        "ky thuat vien",
+        "ktv",
+        "nhan vien sua",
+        "nguoi sua",
+        "sua chua"
+    ],
+    "Đã sửa xong": [
+        "da sua",
+        "da sua xong",
+        "hoan tat",
+        "xong",
+        "done",
+        "fix ok"
+    ],
+    "Không sửa được": [
+        "khong sua",
+        "khong sua duoc",
+        "that bai",
+        "fail",
+        "khong thanh cong"
+    ],
+    "Từ chối bảo hành": [
+        "tu choi",
+        "khong bh",
+        "tu choi bh",
+        "bao hanh tu choi"
+    ],
+    "Tên lỗi": [
+        "ten loi",
+        "loi",
+        "mo ta loi",
+        "loi ky thuat",
+        "error"
+    ],
+    "Ngày tiếp nhận": [
+        "ngay nhan",
+        "ngay tiep nhan",
+        "thoi gian nhan",
+        "ngay bao hanh",
+        "ngay gui"
+    ],
+    "Năm": [
+        "nam",
+        "year"
+    ],
+    "Tháng": [
+        "thang",
+        "month"
+    ],
+    "Quý": [
+        "quy",
+        "quarter"
+    ],
+    "Nguồn file": [
+        "nguon file",
+        "file name",
+        "ten file",
+        "nguon"
+    ]
+}
+
 import unicodedata
 import re
 
