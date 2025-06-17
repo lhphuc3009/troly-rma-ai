@@ -14,17 +14,12 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days']
 )
 
-name, authentication_status, username = authenticator.login(location="main", form_name="Đăng nhập")
+authenticator.login()
 
-if authentication_status is False:
-    st.error("Sai tên đăng nhập hoặc mật khẩu")
-elif authentication_status is None:
-    st.warning("Vui lòng nhập thông tin đăng nhập")
-elif authentication_status:
-    st.sidebar.success(f"Xin chào {name}")
+if st.session_state["authentication_status"]:
+    st.sidebar.success(f"Xin chào {st.session_state['name']}")
     authenticator.logout("Đăng xuất", "sidebar")
 
-if authentication_status:
     import os
     from dotenv import load_dotenv
     load_dotenv()
@@ -807,3 +802,8 @@ if authentication_status:
     elif selected_query == truyvan_options[20]:
         title, df_out = rma_query_templates.query_21_technician_status_summary(data_filtered)
         show_table(title, df_out, highlight_cols=["Sửa xong", "Không sửa được", "Từ chối BH", "Tổng xử lý", "Tỷ lệ sửa thành công (%)"])
+
+elif st.session_state["authentication_status"] is False:
+    st.error("Sai tên đăng nhập hoặc mật khẩu")
+elif st.session_state["authentication_status"] is None:
+    st.warning("Vui lòng nhập thông tin đăng nhập")
