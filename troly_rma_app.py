@@ -2,7 +2,6 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 load_dotenv()
-
 import pandas as pd
 import os
 import unicodedata
@@ -15,16 +14,6 @@ from openai import OpenAI
 from rma_ai import query_openai
 import rma_query_templates
 from rma_utils import clean_text, find_col, normalize_for_match, match_block, ensure_time_columns, extract_time_filter_from_question, filter_df_by_time
-# Đọc ánh xạ tên cột từ file JSON
-def load_column_mapping(path="uploaded_files/column_mapping.json"):
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except:
-        return {}
-
-COLUMN_MAPPING = load_column_mapping()
-
 st.set_page_config(page_title="Tra cứu RMA", layout="wide")
 st.title("🔎 Tra cứu dữ liệu bảo hành - sửa chữa")
 
