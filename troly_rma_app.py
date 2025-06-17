@@ -1,29 +1,5 @@
 import streamlit as st
-
-import streamlit_authenticator as stauth
-import yaml
-from yaml.loader import SafeLoader
-
-with open("auth_config.yaml") as file:
-    config = yaml.load(file, Loader=SafeLoader)
-
-authenticator = stauth.Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days']
-)
-
-name, authentication_status, username = authenticator.login("Đăng nhập", location="main")
-
-if authentication_status is False:
-    st.error("Sai tên đăng nhập hoặc mật khẩu")
-elif authentication_status is None:
-    st.warning("Vui lòng nhập thông tin đăng nhập")
-elif authentication_status:
-    st.sidebar.success(f"Xin chào " + name)
-    authenticator.logout("Đăng xuất", "sidebar")
-
+name, authentication_status, username = authenticator.login(location="main", form_name="Đăng nhập")
 if authentication_status:
     import os
     from dotenv import load_dotenv
