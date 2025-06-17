@@ -14,7 +14,7 @@ authenticator = stauth.Authenticate(
     config['cookie']['expiry_days']
 )
 
-name, authentication_status, username = authenticator.login("Đăng nhập", "main")
+name, authentication_status, username = authenticator.login("Đăng nhập", location="main")
 
 if authentication_status is False:
     st.error("Sai tên đăng nhập hoặc mật khẩu")
