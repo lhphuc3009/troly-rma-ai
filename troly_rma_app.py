@@ -6,7 +6,7 @@ from yaml.loader import SafeLoader
 
 with open("auth_config.yaml") as file:
     config = yaml.load(file, Loader=SafeLoader)
-    st.write("DEBUG: config loaded =", config)
+    st.write("DEBUG: USING HASHED =", config['credentials']['usernames']['admin']['password'])
 authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
