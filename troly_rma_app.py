@@ -12,6 +12,8 @@ authenticator = stauth.Authenticate(
     config['cookie']['name'],
     config['cookie']['key'],
     config['cookie']['expiry_days']
+    cookie_settings=None,
+    hashed_passwords=True
 )
 
 authenticator.login()
