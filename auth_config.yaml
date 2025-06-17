@@ -1,0 +1,14 @@
+cookie:
+  expiry_days: 1
+  key: some_secret_key_123
+  name: rma_app_cookie
+credentials:
+  usernames:
+    admin:
+      name: Administrator
+      password: 240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9
+    phuc:
+      name: "L\xEA Ho\xE0ng Ph\xFAc"
+      password: 0e45564c2be434c96603ef095f63fde6c13aed208ad8abb4035eea35ed0ce2a0
+preauthorized:
+  emails: []
