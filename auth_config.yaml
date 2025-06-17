@@ -1,14 +1,14 @@
-cookie:
-  expiry_days: 1
-  key: supersecretkey123
-  name: rma_app_cookie
 credentials:
   usernames:
     admin:
       name: Administrator
-      password: 240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9
+      password: pbkdf2:sha256:260000$SuLV9JdcgaZwHqGi6RxF6C$bb1cd6cd1ffbe4ef48d28f6a785146723ee8dbfae1d6e9ffb087fc1b6bb4f19a
     phuc:
-      name: "L\xEA Ho\xE0ng Ph\xFAc"
-      password: 0e45564c2be434c96603ef095f63fde6c13aed208ad8abb4035eea35ed0ce2a0
+      name: Lê Hoàng Phúc
+      password: pbkdf2:sha256:260000$JP0LknSfzPv47NACXIK3Qi$95dc6d589ba9c2c1042f6fd80a1c36ab6802e93995a76c538fc6f7685a4e07f6
+cookie:
+  name: rma_app_cookie
+  key: supersecretkey123
+  expiry_days: 1
 preauthorized:
   emails: []
