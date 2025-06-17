@@ -1,6 +1,6 @@
 cookie:
   expiry_days: 1
-  key: some_secret_key_123
+  key: supersecretkey123
   name: rma_app_cookie
 credentials:
   usernames:
