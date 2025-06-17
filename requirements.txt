@@ -2,5 +2,3 @@ streamlit
 pandas
 openai
 python-dotenv
-openpyxl
-streamlit-authenticator
